@@ -1,0 +1,3 @@
+xcodebuild -project test/test.xcodeproj -target test -configuration Debug -arch x86_64 -sdk "iphonesimulator"
+dotnet build binding_test/bind_test.csproj
+dotnet build HelloiOS/HelloiOS.csproj

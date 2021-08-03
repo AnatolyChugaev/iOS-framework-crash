@@ -1,1 +1,2 @@
-# iOS-framework-crash
+## Building
+1. Run `./build`

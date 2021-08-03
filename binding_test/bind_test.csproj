@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0-ios</TargetFramework>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <RuntimeIdentifier>iossimulator-x64</RuntimeIdentifier>
+    <IsBindingProject>true</IsBindingProject>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <NativeLibName>ios-fat</NativeLibName>
+    <RootNamespace>NativeLibrary</RootNamespace>
+    <AssemblyName>NativeLibrary</AssemblyName>
+    <OutputPath>..\Binaries</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="ApiDefinition.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ObjcBindingApiDefinition Include="ApiDefinition.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <NativeReference Include="..\Frameworks\test.framework">
+        <Link>test.framework</Link>
+        <Kind>Framework</Kind>
+        <SmartLink>True</SmartLink>
+        <ForceLoad>True</ForceLoad>
+    </NativeReference>
+  </ItemGroup>
+</Project>
